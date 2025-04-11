@@ -1,0 +1,17 @@
+
+---
+
+## ✅ `netlify.toml` Deploy Script
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist" # or "build" if using CRA
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  command = "vite" # or "npm run dev" if using CRA or Next.js
+  port = 3000
